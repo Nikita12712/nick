@@ -1,10 +1,16 @@
-import random
+def calculate_sum_product(numbers):
 
-list_length = random.randint(3, 10)
+  if not numbers:
+    return 0
 
-my_list = [random.randint(1, 100) for _ in range(list_length)]
+  sum_of_even_indexed = 0
+  for i in range(0, len(numbers), 2):
+    sum_of_even_indexed += numbers[i]
 
-new_list = [my_list[0], my_list[2], my_list[-2]]
+  return sum_of_even_indexed * numbers[-1]
 
-print("Оригінальний список:", my_list)
-print("Новий список:", new_list)
+list1 = [0, 1, 7, 2, 4, 8]
+
+
+print(calculate_sum_product(list1))  # Виведе: 88
+
