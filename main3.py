@@ -12,5 +12,5 @@ def calculate_sum_product(numbers):
 list1 = [0, 1, 7, 2, 4, 8]
 
 
-print(calculate_sum_product(list1))  # Виведе: 88
+print(calculate_sum_product(list1)) 
 
