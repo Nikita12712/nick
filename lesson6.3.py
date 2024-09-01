@@ -1,15 +1,11 @@
-def multiply_digits_until_single_digit(number): #это обьясняет всю суть кода,лично я так понял
+num = int(input("Введіть ціле число: "))
 
-    number = abs(number) #я так понял это переводит число в положительную форму
+while num > 9:
+    product = 1
+    while num > 0:
+        digit = num % 10
+        product *= digit
+        num //= 10
+    num = product
 
-    while number > 9: #если число больше 9
-        result = 1 #то результат 1
-        for digit in str(number): #это не понял
-            result *= int(digit) #это не понял
-        number = result #это присваеваем номер к результату
-
-    return number #это возвращает номер
-
-user_input = int(input("Enter a number: ")) #это для ввода числа человеком
-result = multiply_digits_until_single_digit(user_input) #это для результата
-print(result) #это результат
+print("Результат:", num)
